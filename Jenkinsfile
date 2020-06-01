@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ('Build Backend') {
             steps {
-                sh label: '', script: 'mvn clean package -DskipTests=true'
+                sh label: '', script: '/etc/apache-maven-3.6.3/bin/mvn clean package -DskipTests=true'
             }
         }
         stage ('Meio') {
