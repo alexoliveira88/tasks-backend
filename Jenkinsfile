@@ -36,8 +36,10 @@ pipeline {
         }
         stage ('Api Test') {
             steps {
-                git credentialsId: '0813905c-10c6-4966-9f1b-df87a61ba293', url: 'https://github.com/alexoliveira88/tasks-api-test'
-                sh label: '', script: '/etc/apache-maven-3.6.3/bin/mvn test'
+                dir('api-test') {
+                    git credentialsId: '0813905c-10c6-4966-9f1b-df87a61ba293', url: 'https://github.com/alexoliveira88/tasks-api-test'
+                    sh label: '', script: '/etc/apache-maven-3.6.3/bin/mvn test'
+                }
             }
         }
 
