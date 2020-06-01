@@ -1,9 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage ('inicio') {
+        stage ('Build Backend') {
             steps {
-                sh label: '', script: 'echo inicio '
+                sh label: '', script: 'mvn clean package -DskipTests=true'
             }
         }
         stage ('Meio') {
