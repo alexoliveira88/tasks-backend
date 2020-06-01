@@ -6,9 +6,9 @@ pipeline {
                 sh label: '', script: '/etc/apache-maven-3.6.3/bin/mvn clean package -DskipTests=true'
             }
         }
-        stage ('Meio') {
+        stage ('Unit Tests') {
             steps {
-                sh label: '', script: 'echo meio '
+                sh label: '', script: '/etc/apache-maven-3.6.3/bin/mvn test'
             }
         }
         stage ('Fim') {
