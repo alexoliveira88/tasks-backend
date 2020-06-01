@@ -51,6 +51,14 @@ pipeline {
                 }
             }
         }
+        stage ('Functional Test') {
+            steps {
+                dir('functional-test') {
+                    git credentialsId: '0813905c-10c6-4966-9f1b-df87a61ba293', url: 'https://github.com/alexoliveira88/tasks-functional-tests'
+                    sh label: '', script: '/etc/apache-maven-3.6.3/bin/mvn test'
+                }
+            }
+        }
     }
     
 }
