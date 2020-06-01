@@ -11,12 +11,7 @@ pipeline {
                 sh label: '', script: '/etc/apache-maven-3.6.3/bin/mvn test'
             }
         }
-        stage ('Fim') {
-            steps {
-                sleep(5)
-                sh label: '', script: 'echo Fim '
-            }
-        }
+
     }
     
 }
