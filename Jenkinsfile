@@ -61,8 +61,8 @@ pipeline {
         }
         stage ('Deploy prod') {
             steps {
-                sh label: '', script: '/usr/local/bin/docker-compose build'
-                sh label: '', script: '/usr/local/bin/docker-compose up -d'
+                sh label: '', script: 'sudo /usr/local/bin/docker-compose build'
+                sh label: '', script: 'sudo /usr/local/bin/docker-compose up -d'
             }
         }
     }
