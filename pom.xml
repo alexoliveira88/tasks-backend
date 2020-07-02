@@ -14,7 +14,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>tasks-backend</name>
 	<packaging>war</packaging>
-	<description>A very simple task management tool v2</description>
+	<description>A very simple task management tool </description>
 
 	<properties>
 		<java.version>1.8</java.version>
